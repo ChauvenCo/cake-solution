@@ -14,7 +14,10 @@ class Fly2(Flyable):
         print("zbeub")
 
 class Duck(ABC):
-    def __init__(self, flyingClass):
+    def __init__(self, flyingClass : Flyable):
+        self.flyingClass = flyingClass
+
+    def changeFly(self, flyingClass : Flyable):
         self.flyingClass = flyingClass
 
     def fly(self):

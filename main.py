@@ -4,6 +4,7 @@ from cakesolution import *
 from vehicles import *
 from converters import *
 from ducks import *
+from weather import *
 
 class App:
     def __init__(self, converter):
@@ -29,7 +30,15 @@ if __name__ == '__main__':
     # app = App(converter)
     # app.start()
 
-    fly1 = Fly1()
-    duck = MallardDuck(fly1)
-    duck.display()
-    duck.fly()
+    # fly1 = Fly1()
+    # duck = MallardDuck(fly1)
+    # duck.display()
+    # duck.fly()
+
+    screen = Display()
+    stats = StatsDisplay()
+
+    datas = WeatherData()
+    datas.append(screen)
+    datas.append(stats)
+    datas.measurementChanged()
