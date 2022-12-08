@@ -3,6 +3,7 @@ import progressbar as p
 from cakesolution import *
 from vehicles import *
 from converters import *
+from ducks import *
 
 class App:
     def __init__(self, converter):
@@ -24,6 +25,11 @@ if __name__ == '__main__':
     # car = Car()
     # car.go()
 
-    converter = FXConverter()
-    app = App(converter)
-    app.start()
+    # converter = FXConverter()
+    # app = App(converter)
+    # app.start()
+
+    fly1 = Fly1()
+    duck = MallardDuck(fly1)
+    duck.display()
+    duck.fly()
