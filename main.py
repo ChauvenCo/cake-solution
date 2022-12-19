@@ -5,6 +5,7 @@ from vehicles import *
 from converters import *
 from ducks import *
 from weather import *
+from StarBuzz import *
 
 class App:
     def __init__(self, converter):
@@ -35,10 +36,13 @@ if __name__ == '__main__':
     # duck.display()
     # duck.fly()
 
-    screen = Display()
-    stats = StatsDisplay()
+    # screen = Display()
+    # stats = StatsDisplay()
+    #
+    # datas = WeatherData()
+    # datas.append(screen)
+    # datas.append(stats)
+    # datas.measurementChanged()
 
-    datas = WeatherData()
-    datas.append(screen)
-    datas.append(stats)
-    datas.measurementChanged()
+    cafe = Sugar(Milk(Expresso()))
+    cafe.cost()
